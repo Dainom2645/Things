@@ -14,7 +14,7 @@
             font-family: 'Arial', sans-serif;
             transition: background-color 0.5s;
             margin: 0;
-            overflow: hidden; /* Previene el desplazamiento de la página */
+            overflow: hidden;
         }
         .container {
             position: relative;
@@ -64,16 +64,15 @@
         .carta-completa {
             display: none;
             position: fixed;
-            top: 20px; /* Ajusta el margen superior */
-            left: 0;
-            width: 100vw;
-            height: auto; /* Permite que el contenido ocupe más espacio si es necesario */
-            max-height: 80vh; /* No deja que la carta sea más alta que el 80% de la pantalla */
+            top: 10%; /* Mantén un pequeño espacio desde la parte superior */
+            left: 5%;
+            width: 90%; /* Ocupa el 90% del ancho */
+            height: auto; /* La carta se ajustará automáticamente al contenido */
             background: white;
             color: black;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Alinea el contenido al principio */
+            align-items: flex-start; /* Alineación al principio */
             padding: 20px;
             text-align: center;
             font-size: 20px;
@@ -81,7 +80,7 @@
             flex-direction: column;
             opacity: 0;
             transition: opacity 1s ease;
-            overflow-y: scroll; /* Permite el desplazamiento vertical */
+            overflow-y: auto; /* Permite desplazamiento si el contenido es grande */
         }
         .carta-completa.mostrar {
             opacity: 1;
@@ -96,7 +95,8 @@
             font-size: 16px;
             border-radius: 5px;
         }
-        /* Hacer que el texto sea más responsivo */
+
+        /* Estilos responsivos para pantallas pequeñas */
         @media (max-width: 600px) {
             .sobre {
                 width: 180px;
@@ -109,7 +109,7 @@
             .carta-completa {
                 padding: 15px;
                 font-size: 18px;
-                max-height: 70vh; /* Ajusta el máximo en móviles */
+                max-height: 90vh; /* Permite que la carta se ajuste más en móviles */
             }
             .btn-cerrar {
                 padding: 8px 15px;
@@ -166,4 +166,3 @@
     </script>
 </body>
 </html>
-
