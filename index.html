@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Carta Interactiva</title>
     <style>
         body {
@@ -14,6 +14,7 @@
             font-family: 'Arial', sans-serif;
             transition: background-color 0.5s;
             margin: 0;
+            overflow: hidden; /* Previene el desplazamiento de la página */
         }
         .container {
             position: relative;
@@ -79,7 +80,7 @@
             flex-direction: column;
             opacity: 0;
             transition: opacity 1s ease;
-            overflow-y: auto;
+            overflow-y: auto; /* Permite desplazamiento vertical */
         }
         .carta-completa.mostrar {
             opacity: 1;
