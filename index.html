@@ -64,10 +64,11 @@
         .carta-completa {
             display: none;
             position: fixed;
-            top: 10px; /* Ajusta el margen superior */
+            top: 20px; /* Ajusta el margen superior */
             left: 0;
             width: 100vw;
-            height: 90vh; /* Ajusta la altura para permitir que el contenido se vea completamente */
+            height: auto; /* Permite que el contenido ocupe más espacio si es necesario */
+            max-height: 80vh; /* No deja que la carta sea más alta que el 80% de la pantalla */
             background: white;
             color: black;
             display: flex;
@@ -80,7 +81,7 @@
             flex-direction: column;
             opacity: 0;
             transition: opacity 1s ease;
-            overflow-y: auto; /* Permite desplazamiento vertical */
+            overflow-y: scroll; /* Permite el desplazamiento vertical */
         }
         .carta-completa.mostrar {
             opacity: 1;
@@ -108,6 +109,7 @@
             .carta-completa {
                 padding: 15px;
                 font-size: 18px;
+                max-height: 70vh; /* Ajusta el máximo en móviles */
             }
             .btn-cerrar {
                 padding: 8px 15px;
